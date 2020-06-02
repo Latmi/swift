@@ -49,3 +49,29 @@ var area = sqrt(p * (p - k1) * (p - k2) * (p - g))
 print("Катет1: \(k1), катет2: \(k2)")
 print("Гипотенуза: \(g), периметр: \(perimeter), площадь: \(area)")
 
+
+
+print("\r\n")
+print("3. * Пользователь вводит сумму вклада в банк и годовой процент. Найти сумму вклада через 5 лет.\r\n")
+
+let annualPercentage: Double = 0.11 //годовой процент 15%
+let deposit: Double = 600000
+let interval: Int = 5
+
+var i: Int = 0
+
+var totalDeposit: Double = 0
+
+while i < interval {
+    
+    if (i == 0) {
+        totalDeposit = deposit * annualPercentage + deposit
+    } else {
+        totalDeposit += totalDeposit * annualPercentage
+    }
+    
+    i+=1
+}
+
+print("Сумма вклада \(deposit). Ставка: \(annualPercentage * 100)% годовых")
+print("Сумма вклада через 5 лет: \(totalDeposit)")
