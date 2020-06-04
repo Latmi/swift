@@ -23,3 +23,9 @@ func checkNumberIsDivRemBy3 (number: Int) -> Bool {
         return false
     }
 }
+
+
+
+// 3. Создать возрастающий массив из 100 чисел.
+
+var arrNumbers: [Int] = Array (1...100)
