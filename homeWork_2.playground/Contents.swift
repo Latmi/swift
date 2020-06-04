@@ -10,3 +10,16 @@ func checkNumberIsEven (number: Int) -> Bool {
         return false
     }
 }
+
+
+
+// 2. Написать функцию, которая определяет, делится ли число без остатка на 3.
+
+func checkNumberIsDivRemBy3 (number: Int) -> Bool {
+    
+    if number % 3 == 0 {
+        return true
+    } else {
+        return false
+    }
+}
