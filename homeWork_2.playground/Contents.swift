@@ -29,3 +29,15 @@ func checkNumberIsDivRemBy3 (number: Int) -> Bool {
 // 3. Создать возрастающий массив из 100 чисел.
 
 var arrNumbers: [Int] = Array (1...100)
+
+
+
+// 4. Удалить из этого массива все четные числа и все числа, которые не делятся на 3.
+
+for value in  arrNumbers {
+    
+    if (checkNumberIsEven(number: value) || !checkNumberIsDivRemBy3(number: value)) {
+        
+        arrNumbers.remove(at: arrNumbers.firstIndex(of: value)!)
+    }
+}
