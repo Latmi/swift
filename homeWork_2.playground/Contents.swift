@@ -41,3 +41,40 @@ for value in  arrNumbers {
         arrNumbers.remove(at: arrNumbers.firstIndex(of: value)!)
     }
 }
+
+
+
+// 5. * Написать функцию, которая добавляет в массив новое число Фибоначчи, и добавить при помощи нее 100 элементов.
+
+
+var arrFibonachi: [Int] = [1, 1]
+
+
+func addFibonachiNum (array: inout [Int]) {
+
+    var nextValue: Int = 0;
+    for val in stride(from: array.count - 1, through: array.count - 2, by: -1) {
+        nextValue += array[val]
+    }
+    array.append(nextValue)
+    
+    
+}
+
+// в задании сказано добавить 100 раз, но на 91 добавлении начинает вылезать ошибка
+// rror: Execution was interrupted, reason: EXC_BAD_INSTRUCTION (code=EXC_I386_INVOP, subcode=0x0).
+
+for _ in (1...90) {
+    addFibonachiNum(array: &arrFibonachi)
+}
+
+
+
+
+
+
+
+
+
+
+
