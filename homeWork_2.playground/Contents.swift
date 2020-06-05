@@ -70,11 +70,25 @@ for _ in (1...90) {
 
 
 
+// 6. *. Заполнить массив из 100 элементов различными простыми числами.
 
 
+let n = 541
+var arrSimpleNums = [Int](2...n)
+var p = 2
 
+while p != 0 {
 
+    for i in 2...n {
+        if let index = arrSimpleNums.firstIndex(of: (i * p)) {
+            arrSimpleNums.remove(at: index)
+        }
+    }
+    let index = arrSimpleNums.firstIndex(of: p)
 
-
-
-
+    if (index != (arrSimpleNums.endIndex - 1)) {
+        p = arrSimpleNums[index! + 1]
+    } else {
+        p = 0
+    }
+}
